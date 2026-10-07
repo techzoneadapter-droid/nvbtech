@@ -2,30 +2,26 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#05070d" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <!-- build: 2026-10-07-2342-ai-hologram -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#050913" />
   <meta name="description" content="NVB Tech — giải pháp công nghệ, phần mềm, AI và tự động hóa dành cho doanh nghiệp." />
-  <meta property="og:title" content="NVB Tech | Công nghệ & Dịch vụ" />
+  <meta property="og:title" content="NVB Tech | Technology • AI • Digital Solutions" />
   <meta property="og:description" content="Kiến tạo giải pháp công nghệ cho tương lai." />
   <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <title>NVB Tech | Công ty TNHH Công nghệ và Dịch vụ NVB</title>
 
   <style>
     :root{
-      --bg:#04070d;
-      --bg2:#080d17;
-      --card:rgba(12,18,30,.72);
-      --line:rgba(255,255,255,.09);
-      --muted:#94a0b1;
+      --bg:#050913;
+      --bg2:#09111e;
+      --card:rgba(11,17,29,.78);
+      --line:rgba(255,255,255,.085);
       --text:#f5f8ff;
-      --red:#ff2448;
-      --red2:#ff6379;
-      --cyan:#5ee8ff;
-      --green:#51efbd;
+      --muted:#9aa7b9;
+      --red:#ff294f;
+      --red2:#ff748c;
+      --cyan:#7cefff;
       --max:1200px;
       --radius:24px;
       --shadow:0 28px 90px rgba(0,0,0,.42);
@@ -38,271 +34,423 @@
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at 76% 8%,rgba(255,36,72,.12),transparent 30%),
-        radial-gradient(circle at 12% 55%,rgba(94,232,255,.07),transparent 28%),
-        linear-gradient(180deg,#03060b 0%,#050913 55%,#03060b 100%);
+        radial-gradient(circle at 82% 10%,rgba(255,41,79,.11),transparent 30%),
+        radial-gradient(circle at 10% 58%,rgba(124,239,255,.055),transparent 26%),
+        linear-gradient(180deg,#03060d 0%,#060b15 52%,#03060d 100%);
       overflow-x:hidden;
     }
+
     a{color:inherit;text-decoration:none}
     button{font:inherit}
     .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-    .grid-overlay{
-      position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.16;
+
+    #stars{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.78}
+    .grid-bg{
+      position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.12;
       background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+        linear-gradient(rgba(255,255,255,.026) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.026) 1px,transparent 1px);
       background-size:42px 42px;
       mask-image:linear-gradient(to bottom,#000,transparent 92%);
     }
-    #stars{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.76}
 
     header{
       position:sticky;top:0;z-index:50;
-      background:rgba(4,7,13,.78);
+      background:rgba(4,8,15,.82);
       backdrop-filter:blur(18px);
       border-bottom:1px solid var(--line);
     }
     .nav{
-      min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px;
+      min-height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
     }
+
     .brand{display:flex;align-items:center;gap:14px;min-width:0}
-    .brand-logo{
-      width:58px;height:58px;display:grid;place-items:center;position:relative;flex:none;
-      border:1px solid rgba(255,36,72,.32);border-radius:18px;
+    .brand-mark{
+      width:62px;height:62px;flex:none;
+      display:grid;place-items:center;
+      border-radius:18px;
+      border:1px solid rgba(255,41,79,.26);
       background:
-        radial-gradient(circle at 50% 50%,rgba(255,36,72,.17),transparent 68%),
-        linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
-      box-shadow:0 0 34px rgba(255,36,72,.15),inset 0 0 24px rgba(255,36,72,.05);
-      overflow:hidden;
+        radial-gradient(circle at center,rgba(255,41,79,.15),transparent 66%),
+        linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.01));
+      box-shadow:0 0 30px rgba(255,41,79,.15),inset 0 0 20px rgba(255,41,79,.04);
     }
-    .brand-logo:before,.brand-logo:after{
-      content:"";position:absolute;border:1px solid rgba(255,36,72,.34);border-radius:50%;
+    .brand-mark svg{width:46px;height:46px;display:block}
+    .brand-copy{min-width:0;line-height:1.08}
+    .brand-copy strong{
+      display:block;
+      font-size:24px;
+      font-weight:950;
+      letter-spacing:-.035em;
+      white-space:nowrap;
     }
-    .brand-logo:before{width:46px;height:46px}
-    .brand-logo:after{width:34px;height:34px;border-style:dashed;animation:spinLogo 9s linear infinite}
-    @keyframes spinLogo{to{transform:rotate(360deg)}}
-    .brand-logo b{
-      position:relative;z-index:2;color:#ff4360;font-size:15px;font-weight:950;letter-spacing:-.08em;
-      text-shadow:0 0 16px rgba(255,36,72,.55);
-    }
-    .brand-copy{line-height:1.08;min-width:0}
-    .brand-copy strong{display:block;font-size:17px;letter-spacing:.02em;white-space:nowrap}
     .brand-copy small{
-      display:block;margin-top:7px;color:#97a2b3;font-size:11px;
-      letter-spacing:.13em;text-transform:uppercase;white-space:nowrap;
+      display:block;
+      margin-top:7px;
+      color:#98a5b7;
+      font-size:11px;
+      font-weight:650;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      white-space:nowrap;
     }
 
     nav{display:flex;align-items:center;gap:28px}
-    nav>a:not(.nav-cta){font-size:14px;color:#c5ceda;transition:.2s}
+    nav>a:not(.nav-cta){font-size:14px;color:#c7d0dc;transition:.2s}
     nav>a:not(.nav-cta):hover{color:#fff}
-    .nav-cta,.btn{
+
+    .btn,.nav-cta{
       display:inline-flex;align-items:center;justify-content:center;gap:9px;
-      border-radius:14px;padding:13px 18px;font-weight:780;
-      border:1px solid rgba(255,255,255,.11);transition:.25s;
+      padding:14px 20px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.11);
+      font-weight:800;
+      transition:.25s;
     }
-    .nav-cta,.btn-primary{
-      background:linear-gradient(135deg,#ff2a4e,#c20c31);
+    .btn-primary,.nav-cta{
+      background:linear-gradient(135deg,var(--red),#bf0c2d);
       border-color:transparent;
-      box-shadow:0 14px 34px rgba(255,36,72,.22);
+      box-shadow:0 14px 34px rgba(255,41,79,.23);
     }
-    .nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(255,36,72,.34)}
-    .btn-ghost{background:rgba(255,255,255,.035)}
-    .btn-ghost:hover{transform:translateY(-2px);background:rgba(255,255,255,.075);border-color:rgba(255,255,255,.18)}
-    .menu-btn{display:none;background:transparent;border:0;color:#fff;padding:8px}
+    .btn-primary:hover,.nav-cta:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 44px rgba(255,41,79,.34);
+    }
+    .btn-ghost{background:rgba(255,255,255,.032)}
+    .btn-ghost:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.07);
+      border-color:rgba(255,255,255,.18);
+    }
+
+    .menu-btn{display:none;background:none;border:0;color:#fff;padding:8px}
 
     .hero{
-      min-height:760px;padding:92px 0 70px;display:grid;align-items:center;position:relative;
+      min-height:760px;
+      padding:96px 0 72px;
+      display:grid;
+      align-items:center;
     }
-    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:48px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:54px;
+      align-items:center;
+    }
+
     .eyebrow{
-      display:inline-flex;align-items:center;gap:10px;padding:8px 13px;border-radius:999px;
-      border:1px solid rgba(255,36,72,.24);background:rgba(255,36,72,.065);
-      color:#ff8fa2;font-size:12px;font-weight:850;letter-spacing:.13em;text-transform:uppercase;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,41,79,.22);
+      background:rgba(255,41,79,.065);
+      color:#ff91a3;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
     }
-    .pulse{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 7px rgba(255,36,72,.08),0 0 16px var(--red)}
-    h1{font-size:clamp(50px,6vw,80px);line-height:.97;letter-spacing:-.058em;margin:22px 0 22px;max-width:730px}
+    .eyebrow i{
+      width:8px;height:8px;border-radius:50%;
+      background:var(--red);
+      box-shadow:0 0 0 7px rgba(255,41,79,.085),0 0 18px var(--red);
+    }
+
+    h1{
+      max-width:720px;
+      margin:22px 0 22px;
+      font-size:clamp(50px,6vw,82px);
+      line-height:1.02;
+      letter-spacing:-.058em;
+    }
     h1 span{
       color:transparent;
-      background:linear-gradient(100deg,#fff 0%,#ffb8c2 22%,#ff526c 48%,#ff2247 73%,#ff8fa0 100%);
-      -webkit-background-clip:text;background-clip:text;
+      background:linear-gradient(100deg,#fff 0%,#ffc3cd 21%,#ff6b82 47%,#ff294f 74%,#ffa1b1 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
     }
-    .hero p{font-size:18px;line-height:1.72;color:#aab5c4;max-width:680px;margin:0}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}
-    .capabilities{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
-    .capability{
-      padding:9px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.07);
-      background:rgba(255,255,255,.026);color:#bcc5d2;font-size:12px;
+    .hero p{
+      max-width:660px;
+      margin:0;
+      color:#abb6c5;
+      font-size:18px;
+      line-height:1.78;
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .chip{
+      padding:9px 12px;
+      border-radius:11px;
+      border:1px solid rgba(255,255,255,.075);
+      background:rgba(255,255,255,.028);
+      color:#c2cbd7;
+      font-size:12px;
     }
 
-    .hero-visual{position:relative;min-height:560px}
-    .visual-shell{
-      position:absolute;inset:0;border-radius:30px;overflow:hidden;
+    .hero-visual{position:relative;min-height:590px}
+    .visual-card{
+      position:absolute;inset:0;overflow:hidden;
+      border-radius:30px;
       border:1px solid rgba(255,255,255,.08);
       background:
-        radial-gradient(circle at 50% 48%,rgba(255,36,72,.11),transparent 34%),
-        radial-gradient(circle at 54% 44%,rgba(94,232,255,.07),transparent 26%),
-        linear-gradient(145deg,rgba(10,15,25,.95),rgba(6,10,17,.72));
+        radial-gradient(circle at 50% 45%,rgba(255,255,255,.025),transparent 24%),
+        radial-gradient(circle at 80% 15%,rgba(255,41,79,.11),transparent 28%),
+        linear-gradient(145deg,rgba(8,13,23,.97),rgba(6,10,17,.82));
       box-shadow:var(--shadow);
     }
-    .visual-shell:before{
-      content:"";position:absolute;inset:0;opacity:.22;
+    .visual-card:before{
+      content:"";
+      position:absolute;inset:0;opacity:.17;
       background:
-        repeating-linear-gradient(0deg,transparent 0 18px,rgba(94,232,255,.05) 19px 20px),
-        repeating-linear-gradient(90deg,transparent 0 30px,rgba(255,36,72,.035) 31px 32px);
-      mask-image:radial-gradient(circle at center,#000 35%,transparent 82%);
+        repeating-linear-gradient(0deg,transparent 0 18px,rgba(124,239,255,.045) 19px 20px),
+        repeating-linear-gradient(90deg,transparent 0 31px,rgba(255,41,79,.035) 32px 33px);
+      mask-image:radial-gradient(circle at center,#000 32%,transparent 84%);
     }
-    .scan-beam{
-      position:absolute;left:8%;right:8%;height:90px;top:-110px;z-index:6;pointer-events:none;
-      background:linear-gradient(to bottom,transparent,rgba(94,232,255,.08),rgba(94,232,255,.4),rgba(255,36,72,.18),transparent);
-      filter:blur(.4px);
-      animation:scan 5.2s linear infinite;
+
+    .scanline{
+      position:absolute;left:6%;right:6%;height:86px;top:-100px;z-index:5;pointer-events:none;
+      background:linear-gradient(to bottom,transparent,rgba(124,239,255,.06),rgba(124,239,255,.28),rgba(255,41,79,.12),transparent);
+      animation:scanMove 5.2s linear infinite;
     }
-    @keyframes scan{0%{top:-110px}100%{top:100%}}
+    @keyframes scanMove{0%{top:-100px}100%{top:100%}}
 
-    .orbit,.orbit2,.orbit3{
-      position:absolute;left:50%;top:50%;border-radius:50%;transform:translate(-50%,-50%);
-      border:1px solid rgba(255,255,255,.08);pointer-events:none;
-    }
-    .orbit{width:430px;height:430px;border-color:rgba(255,36,72,.28);animation:orb 16s linear infinite}
-    .orbit2{width:335px;height:335px;border-color:rgba(94,232,255,.27);border-style:dashed;animation:orb 11s linear infinite reverse}
-    .orbit3{width:515px;height:515px;border-color:rgba(255,255,255,.055);animation:orb 25s linear infinite}
-    @keyframes orb{to{transform:translate(-50%,-50%) rotate(360deg)}}
-
-    .node{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
-    .n1{left:18%;top:30%;animation:nodePulse 2.4s ease-in-out infinite}
-    .n2{right:15%;top:40%;background:var(--red);box-shadow:0 0 14px var(--red);animation:nodePulse 2s ease-in-out infinite .4s}
-    .n3{left:26%;bottom:18%;animation:nodePulse 2.8s ease-in-out infinite .8s}
-    .n4{right:26%;bottom:20%;background:var(--red);box-shadow:0 0 14px var(--red);animation:nodePulse 2.3s ease-in-out infinite 1s}
-    @keyframes nodePulse{50%{transform:scale(1.8);opacity:.45}}
-
-    .face-wrap{
+    .hud-ring,.hud-ring2,.hud-ring3{
       position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-      width:min(390px,76%);z-index:3;
-      filter:drop-shadow(0 0 26px rgba(94,232,255,.12)) drop-shadow(0 0 28px rgba(255,36,72,.14));
-      animation:floatFace 5s ease-in-out infinite;
+      border-radius:50%;pointer-events:none;
+      border:1px solid rgba(255,255,255,.07);
     }
-    @keyframes floatFace{50%{transform:translate(-50%,calc(-50% - 10px))}}
-    .face-svg{width:100%;display:block}
-    .mesh path,.mesh line,.mesh circle{
-      vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;
-    }
-    .dash{stroke-dasharray:5 9;animation:dash 7s linear infinite}
-    @keyframes dash{to{stroke-dashoffset:-90}}
+    .hud-ring{width:430px;height:430px;border-color:rgba(255,41,79,.2);animation:spin 18s linear infinite}
+    .hud-ring2{width:330px;height:330px;border-style:dashed;border-color:rgba(124,239,255,.2);animation:spin 12s linear infinite reverse}
+    .hud-ring3{width:520px;height:520px;border-color:rgba(255,255,255,.045);animation:spin 27s linear infinite}
+    @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 
-    .code-rain{
-      position:absolute;inset:0;z-index:1;opacity:.11;overflow:hidden;pointer-events:none;
-      font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:#7ff1ff;line-height:1.6;
+    .ascii-face-wrap{
+      position:absolute;inset:0;z-index:3;
+      display:grid;place-items:center;
+      padding:42px;
     }
-    .code-rain span{position:absolute;top:-35%;white-space:pre;animation:rain linear infinite}
-    .code-rain span:nth-child(1){left:6%;animation-duration:10s}
-    .code-rain span:nth-child(2){left:25%;animation-duration:13s;color:#ff5b74}
-    .code-rain span:nth-child(3){left:67%;animation-duration:11s}
-    .code-rain span:nth-child(4){right:5%;animation-duration:14s;color:#ff5b74}
-    @keyframes rain{to{transform:translateY(850px)}}
+    .ascii-svg{
+      width:min(500px,100%);
+      max-width:100%;
+      display:block;
+      filter:drop-shadow(0 0 18px rgba(255,255,255,.05)) drop-shadow(0 0 24px rgba(255,41,79,.1));
+      animation:floatFace 5.6s ease-in-out infinite;
+    }
+    @keyframes floatFace{50%{transform:translateY(-9px)}}
 
-    .panel{
-      position:absolute;z-index:5;padding:13px 15px;border-radius:16px;
-      border:1px solid rgba(255,255,255,.09);background:rgba(8,12,21,.72);
-      backdrop-filter:blur(11px);box-shadow:0 16px 38px rgba(0,0,0,.3);
-      color:#aeb9c7;font-size:12px;min-width:175px;
+    .ascii-digits text{
+      font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+      font-size:8px;
+      fill:rgba(255,255,255,.84);
+      letter-spacing:.06em;
     }
-    .panel b{display:block;color:#fff;font-size:13px;margin-bottom:5px}
-    .p1{top:72px;right:22px;animation:panelFloat 6s ease-in-out infinite}
-    .p2{left:20px;bottom:88px;animation:panelFloat 7s ease-in-out infinite reverse}
-    .p3{right:58px;bottom:45px;animation:panelFloat 5.5s ease-in-out infinite}
-    @keyframes panelFloat{50%{transform:translateY(-10px)}}
-    .bars{display:flex;align-items:flex-end;gap:4px;height:22px;margin-top:7px}
-    .bars i{display:block;width:5px;border-radius:4px;background:linear-gradient(var(--red2),#7a0c25);animation:beat 1.4s ease-in-out infinite}
-    .bars i:nth-child(1){height:32%}.bars i:nth-child(2){height:58%;animation-delay:.15s}.bars i:nth-child(3){height:92%;animation-delay:.3s}.bars i:nth-child(4){height:50%;animation-delay:.45s}.bars i:nth-child(5){height:72%;animation-delay:.6s}
-    @keyframes beat{50%{opacity:.5;transform:scaleY(.66)}}
+    .face-outline,.face-line,.face-red{
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .face-outline{stroke:rgba(255,255,255,.28);stroke-width:2.4}
+    .face-line{stroke:rgba(255,255,255,.9);stroke-width:2}
+    .face-red{stroke:var(--red2);stroke-width:2.3}
+
+    .hero-panel{
+      position:absolute;z-index:6;
+      min-width:186px;
+      padding:14px 16px;
+      border-radius:17px;
+      background:rgba(7,11,19,.8);
+      border:1px solid rgba(255,255,255,.09);
+      backdrop-filter:blur(10px);
+      box-shadow:0 18px 40px rgba(0,0,0,.3);
+      color:#b5c0ce;
+      font-size:12px;
+      line-height:1.45;
+    }
+    .hero-panel b{display:block;color:#fff;font-size:13px;margin-bottom:5px}
+    .p1{top:70px;right:24px}
+    .p2{bottom:80px;left:24px}
+    .p3{bottom:44px;right:50px}
+
+    .bars{display:flex;align-items:flex-end;gap:4px;height:22px;margin-top:8px}
+    .bars i{display:block;width:5px;border-radius:4px;background:linear-gradient(var(--red2),#7b0e27);animation:beat 1.4s ease-in-out infinite}
+    .bars i:nth-child(1){height:32%}.bars i:nth-child(2){height:58%;animation-delay:.15s}.bars i:nth-child(3){height:90%;animation-delay:.3s}.bars i:nth-child(4){height:48%;animation-delay:.45s}.bars i:nth-child(5){height:72%;animation-delay:.6s}
+    @keyframes beat{50%{opacity:.52;transform:scaleY(.68)}}
 
     .section{padding:92px 0}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
-    .kicker{color:#ff748a;font-size:12px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;margin-bottom:11px}
-    h2{font-size:clamp(34px,4vw,54px);line-height:1.05;letter-spacing:-.04em;margin:0}
-    .section-head p{max-width:530px;color:var(--muted);line-height:1.75;margin:0}
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:28px;
+      margin-bottom:34px;
+    }
+    .kicker{
+      color:#ff8197;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    h2{
+      margin:0;
+      font-size:clamp(36px,4vw,56px);
+      line-height:1.08;
+      letter-spacing:-.04em;
+    }
+    .section-head p{
+      max-width:520px;
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:16px;
+    }
 
     .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .service{
-      position:relative;overflow:hidden;min-height:300px;padding:30px;border-radius:var(--radius);
-      border:1px solid var(--line);background:linear-gradient(155deg,rgba(14,20,33,.9),rgba(7,11,18,.78));
-      box-shadow:0 20px 70px rgba(0,0,0,.26);transition:.3s;
+      position:relative;overflow:hidden;
+      min-height:300px;
+      padding:30px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:linear-gradient(155deg,rgba(13,19,31,.92),rgba(8,12,19,.82));
+      box-shadow:0 20px 70px rgba(0,0,0,.24);
+      transition:.3s;
     }
     .service:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.16)}
     .service:before{
-      content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-85px;top:-95px;
-      background:var(--glow);filter:blur(10px);opacity:.68
+      content:"";position:absolute;top:-90px;right:-90px;width:190px;height:190px;border-radius:50%;
+      background:var(--glow);filter:blur(12px);opacity:.65;
     }
-    .num{position:absolute;right:24px;top:20px;color:rgba(255,255,255,.045);font-size:54px;font-weight:900}
+    .num{position:absolute;top:20px;right:24px;color:rgba(255,255,255,.045);font-size:54px;font-weight:900}
     .service-icon{
-      width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:43px;
-      background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09)
+      width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:42px;
+      border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);
     }
-    .service h3{font-size:22px;margin:0 0 12px}
+    .service h3{margin:0 0 12px;font-size:22px}
     .service p{margin:0;color:#9da9b8;line-height:1.75}
-    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
-    .tag{font-size:11px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.055);color:#bbc5d1}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .tag{
+      padding:6px 9px;border-radius:9px;font-size:11px;
+      background:rgba(255,255,255,.038);border:1px solid rgba(255,255,255,.06);color:#c5cfd9;
+    }
 
-    .company-box{
-      border:1px solid rgba(255,36,72,.18);border-radius:30px;padding:44px;
+    .company-shell{
+      border-radius:30px;
+      border:1px solid rgba(255,41,79,.15);
+      overflow:hidden;
       background:
-        radial-gradient(circle at 91% 12%,rgba(255,36,72,.1),transparent 30%),
-        linear-gradient(145deg,rgba(13,18,29,.94),rgba(7,10,17,.9));
+        radial-gradient(circle at 92% 12%,rgba(255,41,79,.075),transparent 26%),
+        linear-gradient(145deg,rgba(11,16,26,.95),rgba(7,10,17,.92));
       box-shadow:var(--shadow);
     }
-    .company-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:center}
-    .company-card{
-      padding:22px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.025)
+    .company-top{
+      padding:38px 40px 28px;
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:30px;
+      align-items:end;
+      border-bottom:1px solid var(--line);
     }
-    .company-card+ .company-card{margin-top:12px}
-    .company-card small{display:block;color:#8390a2;margin-bottom:8px;text-transform:uppercase;letter-spacing:.09em}
-    .company-card b{font-size:18px;line-height:1.5}
-    .contact-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+    .company-top p{margin:0;color:var(--muted);line-height:1.75}
+    .company-bottom{
+      padding:28px 40px 40px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:center;
+    }
+    .company-cards{display:grid;grid-template-columns:1.6fr .7fr;gap:12px}
+    .company-card{
+      padding:20px 22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.025);
+      min-width:0;
+    }
+    .company-card small{
+      display:block;color:#8491a3;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;font-size:11px;
+    }
+    .company-card b{display:block;font-size:16px;line-height:1.5;word-break:break-word}
+    .contact-actions{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}
 
-    footer{padding:34px 0 46px;color:#7d8998;font-size:12px}
-    .footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:25px}
-    .footer strong{color:#b8c1ce}
+    footer{padding:30px 0 44px;color:#7e8a9a;font-size:12px}
+    .footer{
+      display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+      border-top:1px solid var(--line);padding-top:24px;
+    }
+    .footer strong{color:#c6cfda}
 
     .reveal{opacity:0;transform:translateY(20px);transition:.7s ease}
     .reveal.show{opacity:1;transform:none}
 
-    @media(max-width:980px){
-      nav{display:none;position:absolute;top:82px;left:0;right:0;background:#070b13;border-bottom:1px solid var(--line);padding:20px;flex-direction:column;align-items:flex-start}
-      nav.open{display:flex}.menu-btn{display:block}
-      .hero-grid,.company-grid{grid-template-columns:1fr}
+    @media(max-width:1024px){
+      .hero-grid,.company-top,.company-bottom{grid-template-columns:1fr}
       .services{grid-template-columns:1fr}
       .section-head{flex-direction:column;align-items:flex-start}
+      .company-cards{grid-template-columns:1fr}
       .contact-actions{justify-content:flex-start}
-      .hero-visual{min-height:520px}
+    }
+    @media(max-width:920px){
+      nav{
+        display:none;position:absolute;top:84px;left:0;right:0;
+        background:#070b13;border-bottom:1px solid var(--line);
+        padding:20px;flex-direction:column;align-items:flex-start;
+      }
+      nav.open{display:flex}
+      .menu-btn{display:block}
     }
     @media(max-width:640px){
       .container{width:min(var(--max),calc(100% - 24px))}
-      .brand-copy strong{font-size:14px}.brand-copy small{font-size:9px}
-      .hero{min-height:auto;padding:62px 0 48px}.hero-visual{min-height:440px}
-      h1{font-size:51px}.hero p{font-size:16px}
-      .visual-shell{border-radius:24px}.company-box{padding:25px}
+      .brand-copy strong{font-size:20px}
+      .brand-copy small{font-size:9px;letter-spacing:.11em;white-space:normal}
+      .brand-mark{width:54px;height:54px}.brand-mark svg{width:40px;height:40px}
+      .hero{min-height:auto;padding:62px 0 48px}
+      h1{font-size:52px;line-height:1.04}
+      .hero p{font-size:16px}
+      .hero-visual{min-height:480px}
+      .visual-card{border-radius:24px}
+      .ascii-face-wrap{padding:24px}
+      .hero-panel{min-width:0;max-width:165px;font-size:11px;padding:11px 12px}
+      .p1{top:18px;right:8px}.p2{bottom:78px;left:8px}.p3{bottom:14px;right:8px}
+      .company-top,.company-bottom{padding-left:24px;padding-right:24px}
       .footer{flex-direction:column}
-      .p1{right:8px}.p2{left:8px}.p3{right:16px}
     }
     @media(prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
-      .brand-logo:after,.scan-beam,.orbit,.orbit2,.orbit3,.face-wrap,.code-rain span,.panel,.bars i{animation:none!important}
+      .scanline,.hud-ring,.hud-ring2,.hud-ring3,.ascii-svg,.bars i{animation:none!important}
       .reveal{opacity:1;transform:none}
     }
   </style>
 </head>
+
 <body>
   <canvas id="stars" aria-hidden="true"></canvas>
-  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
 
   <header>
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="NVB Tech - Trang chủ">
-        <span class="brand-logo"><b>NVB</b></span>
-        <span class="brand-copy">
+      <a class="brand" href="#home" aria-label="NVB Tech">
+        <div class="brand-mark">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff7b90"/>
+                <stop offset=".45" stop-color="#ff294f"/>
+                <stop offset="1" stop-color="#9c0d29"/>
+              </linearGradient>
+            </defs>
+            <path d="M18 76V38l24 24V38h10l18 28 18-28h12v38H86V56L70 81h-4L50 56v24H40L28 68v8z" fill="url(#logoGrad)"/>
+            <path d="M19 30c20-22 60-24 82-4M101 90c-25 18-59 16-81-5" fill="none" stroke="#ff294f" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-copy">
           <strong>NVB TECH</strong>
           <small>Technology • AI • Digital Solutions</small>
-        </span>
+        </div>
       </a>
 
       <nav id="nav">
@@ -323,7 +471,7 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow"><span class="pulse"></span> NVB Technology &amp; Services</div>
+          <div class="eyebrow"><i></i> NVB Technology &amp; Services</div>
           <h1>Kiến tạo <span>giải pháp công nghệ</span> cho tương lai.</h1>
           <p>NVB Tech tập trung vào phần mềm, AI, tự động hóa và các giải pháp số giúp doanh nghiệp vận hành thông minh hơn, nhanh hơn và hiệu quả hơn.</p>
 
@@ -333,80 +481,50 @@
             <a class="btn btn-ghost" href="https://www.facebook.com/nguyen.van.bao.679531/" target="_blank" rel="noopener">Facebook</a>
           </div>
 
-          <div class="capabilities">
-            <span class="capability">Phát triển phần mềm</span>
-            <span class="capability">AI &amp; Automation</span>
-            <span class="capability">Digital Solutions</span>
+          <div class="chips">
+            <span class="chip">Phát triển phần mềm</span>
+            <span class="chip">AI &amp; Automation</span>
+            <span class="chip">Digital Solutions</span>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Hologram AI">
-          <div class="visual-shell"></div>
-          <div class="scan-beam"></div>
-          <div class="orbit"></div>
-          <div class="orbit2"></div>
-          <div class="orbit3"></div>
+        <div class="hero-visual" aria-label="Khuôn mặt công nghệ bằng mã số">
+          <div class="visual-card"></div>
+          <div class="scanline"></div>
+          <div class="hud-ring"></div>
+          <div class="hud-ring2"></div>
+          <div class="hud-ring3"></div>
 
-          <div class="code-rain" aria-hidden="true">
-            <span>010101\nSYSTEM_INIT\nAI.NODE\nDATA_STREAM\n101100\nNEURAL_LINK\n010011</span>
-            <span>const core = AI;\nscan();\nvector.map\n110010\nrender.mesh\n010101</span>
-            <span>FLOW: ACTIVE\nMODEL: READY\n001101\nAUTOMATION\nSYNC_OK\n101011</span>
-            <span>NEURAL\n010101\nDATA_BUS\nPROCESS\n111000\nSECURE\nONLINE</span>
-          </div>
-
-          <span class="node n1"></span>
-          <span class="node n2"></span>
-          <span class="node n3"></span>
-          <span class="node n4"></span>
-
-          <div class="face-wrap">
-            <svg class="face-svg mesh" viewBox="0 0 500 500" role="img" aria-label="Khuôn mặt AI dạng mã nguồn">
+          <div class="ascii-face-wrap">
+            <svg class="ascii-svg" viewBox="0 0 520 520" role="img" aria-label="Digital code face">
               <defs>
-                <linearGradient id="fg1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#73f2ff"/>
-                  <stop offset=".52" stop-color="#ff4f69"/>
-                  <stop offset="1" stop-color="#9f1230"/>
-                </linearGradient>
-                <linearGradient id="fg2" x1="0" y1="1" x2="1" y2="0">
-                  <stop offset="0" stop-color="#43d7ff"/>
-                  <stop offset="1" stop-color="#ff2b50"/>
-                </linearGradient>
+                <clipPath id="faceClip">
+                  <path d="M260 64C195 66 154 116 142 185C132 246 142 315 181 366C205 397 231 418 260 437C289 418 315 397 339 366C378 315 388 246 378 185C366 116 325 66 260 64Z"/>
+                </clipPath>
               </defs>
 
-              <circle cx="250" cy="250" r="182" fill="none" stroke="rgba(255,255,255,.055)" stroke-width="1"/>
-              <circle cx="250" cy="250" r="146" fill="none" stroke="rgba(255,255,255,.055)" stroke-width="1" class="dash"/>
+              <g class="ascii-digits" id="digitLayer" clip-path="url(#faceClip)"></g>
 
-              <path d="M250 76C194 77 159 119 148 178C139 226 145 294 181 340C203 368 228 391 250 404C272 391 297 368 319 340C355 294 361 226 352 178C341 119 306 77 250 76Z"
-                    fill="rgba(255,255,255,.018)" stroke="url(#fg1)" stroke-width="3.4"/>
-              <path d="M178 195C201 177 225 168 250 168C275 168 299 177 322 195" fill="none" stroke="url(#fg2)" stroke-width="3"/>
-              <path d="M185 232C206 220 229 214 250 214C271 214 294 220 315 232" fill="none" stroke="rgba(101,235,255,.82)" stroke-width="2.2"/>
-              <path d="M181 253C204 239 227 234 250 234C273 234 296 239 319 253" fill="none" stroke="url(#fg1)" stroke-width="3.2"/>
-              <path d="M209 294C224 302 237 306 250 306C263 306 276 302 291 294" fill="none" stroke="rgba(255,255,255,.94)" stroke-width="2.5"/>
-              <path d="M198 329C215 342 232 349 250 349C268 349 285 342 302 329" fill="none" stroke="url(#fg2)" stroke-width="3"/>
-
-              <path d="M250 133V363" stroke="rgba(255,255,255,.14)" stroke-width="1.2" class="dash"/>
-              <path d="M165 250H335" stroke="rgba(255,255,255,.09)" stroke-width="1.1" class="dash"/>
-              <path d="M192 153L166 122M308 153L334 122M181 336L146 365M319 336L354 365"
-                    fill="none" stroke="rgba(104,233,255,.36)" stroke-width="1.8"/>
-
-              <circle cx="208" cy="242" r="4.5" fill="#68efff"/>
-              <circle cx="292" cy="242" r="4.5" fill="#ff3859"/>
-              <circle cx="164" cy="120" r="5" fill="#68efff"/>
-              <circle cx="336" cy="120" r="5" fill="#ff3859"/>
-              <circle cx="144" cy="367" r="5" fill="#68efff"/>
-              <circle cx="356" cy="367" r="5" fill="#ff3859"/>
-
-              <path d="M207 242C220 246 229 247 239 247M293 242C280 246 271 247 261 247" fill="none" stroke="url(#fg2)" stroke-width="2"/>
+              <path class="face-outline" d="M260 64C195 66 154 116 142 185C132 246 142 315 181 366C205 397 231 418 260 437C289 418 315 397 339 366C378 315 388 246 378 185C366 116 325 66 260 64Z"/>
+              <path class="face-line" d="M184 225C204 214 226 208 245 208C264 208 286 214 306 225"/>
+              <path class="face-red" d="M202 257C220 250 241 247 260 247C279 247 300 250 318 257"/>
+              <path class="face-line" d="M222 305C235 312 248 315 260 315C272 315 285 312 298 305"/>
+              <path class="face-red" d="M211 340C226 350 243 356 260 356C277 356 294 350 309 340"/>
+              <path class="face-line" d="M203 176C220 165 240 160 260 160C280 160 300 165 317 176"/>
+              <path class="face-red" d="M260 140V377" opacity=".42"/>
+              <path class="face-line" d="M171 260H349" opacity=".25"/>
+              <circle cx="217" cy="243" r="4.2" fill="#fff"/>
+              <circle cx="303" cy="243" r="4.2" fill="#ff748c"/>
             </svg>
           </div>
 
-          <div class="panel p1">
+          <div class="hero-panel p1">
             <b>NEURAL SCAN</b>
             Phân tích • Tự động hóa
             <div class="bars"><i></i><i></i><i></i><i></i><i></i></div>
           </div>
-          <div class="panel p2"><b>AI CORE</b>Realtime processing • Ready</div>
-          <div class="panel p3"><b>DIGITAL SYSTEM</b>Software • Data • Innovation</div>
+          <div class="hero-panel p2"><b>AI CORE</b>Realtime processing • Ready</div>
+          <div class="hero-panel p3"><b>DIGITAL SYSTEM</b>Software • Data • Innovation</div>
         </div>
       </div>
     </section>
@@ -422,30 +540,30 @@
         </div>
 
         <div class="services">
-          <article class="service reveal" style="--glow:rgba(255,36,72,.13)">
+          <article class="service reveal" style="--glow:rgba(255,41,79,.13)">
             <span class="num">01</span>
             <div class="service-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff4d69" stroke-width="2"><path d="m8 9-3 3 3 3m8-6 3 3-3 3M14 5l-4 14"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff4f69" stroke-width="2"><path d="m8 9-3 3 3 3m8-6 3 3-3 3M14 5l-4 14"/></svg>
             </div>
             <h3>Phát triển phần mềm</h3>
             <p>Website, web app và công cụ nội bộ được xây dựng theo nhu cầu thực tế, ưu tiên hiệu quả vận hành và trải nghiệm sử dụng.</p>
             <div class="tags"><span class="tag">Website</span><span class="tag">Web App</span><span class="tag">UI/UX</span></div>
           </article>
 
-          <article class="service reveal" style="--glow:rgba(94,232,255,.11)">
+          <article class="service reveal" style="--glow:rgba(124,239,255,.11)">
             <span class="num">02</span>
             <div class="service-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#61e8ff" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-3 3.8A4 4 0 0 0 7 18h1a4 4 0 0 0 8 0h1a4 4 0 0 0 2-7.2A4 4 0 0 0 16 7V6a4 4 0 0 0-4-4Z"/><path d="M12 2v20M8 8h4m0 8h4"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7cefff" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-3 3.8A4 4 0 0 0 7 18h1a4 4 0 0 0 8 0h1a4 4 0 0 0 2-7.2A4 4 0 0 0 16 7V6a4 4 0 0 0-4-4Z"/><path d="M12 2v20M8 8h4m0 8h4"/></svg>
             </div>
             <h3>AI &amp; Tự động hóa</h3>
             <p>Tích hợp AI vào quy trình, tự động hóa tác vụ lặp lại và hỗ trợ doanh nghiệp xử lý dữ liệu nhanh, thông minh hơn.</p>
             <div class="tags"><span class="tag">AI</span><span class="tag">Automation</span><span class="tag">Workflow</span></div>
           </article>
 
-          <article class="service reveal" style="--glow:rgba(81,239,189,.1)">
+          <article class="service reveal" style="--glow:rgba(255,255,255,.08)">
             <span class="num">03</span>
             <div class="service-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#59efc1" stroke-width="2"><path d="M4 19.5V9.8L12 4l8 5.8v9.7"/><path d="M8 20v-6h8v6M2 20h20"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><path d="M4 19.5V9.8L12 4l8 5.8v9.7"/><path d="M8 20v-6h8v6M2 20h20"/></svg>
             </div>
             <h3>Tư vấn giải pháp số</h3>
             <p>Định hướng triển khai hệ thống, chuyển đổi số và lựa chọn công nghệ phù hợp với mục tiêu phát triển dài hạn.</p>
@@ -457,17 +575,17 @@
 
     <section class="section" id="company">
       <div class="container">
-        <div class="company-box reveal">
-          <div class="section-head" style="margin-bottom:26px">
+        <div class="company-shell reveal">
+          <div class="company-top">
             <div>
               <div class="kicker">Thông tin doanh nghiệp</div>
               <h2>NVB Technology &amp; Services</h2>
             </div>
-            <p>Thông tin doanh nghiệp chính thức được đặt gọn tại cuối trang để khách hàng và đối tác dễ kiểm tra.</p>
+            <p>Thông tin doanh nghiệp chính thức được đặt gọn ở cuối trang để khách hàng và đối tác dễ kiểm tra.</p>
           </div>
 
-          <div class="company-grid">
-            <div>
+          <div class="company-bottom">
+            <div class="company-cards">
               <div class="company-card">
                 <small>Tên doanh nghiệp</small>
                 <b>CÔNG TY TNHH CÔNG NGHỆ VÀ DỊCH VỤ NVB</b>
@@ -517,48 +635,68 @@
     nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 
     const io=new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('show');
-          io.unobserve(e.target);
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          io.unobserve(entry.target);
         }
       });
-    },{threshold:.13});
+    },{threshold:.14});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
     const canvas=document.getElementById('stars');
     const ctx=canvas.getContext('2d');
-    let dots=[];
-    function resize(){
-      const dpr=Math.min(devicePixelRatio||1,2);
+    let stars=[];
+    function resizeCanvas(){
+      const dpr=Math.min(window.devicePixelRatio||1,2);
       canvas.width=innerWidth*dpr;
       canvas.height=innerHeight*dpr;
       canvas.style.width=innerWidth+'px';
       canvas.style.height=innerHeight+'px';
       ctx.setTransform(dpr,0,0,dpr,0,0);
-      dots=Array.from({length:Math.min(95,Math.floor(innerWidth/15))},()=>({
+      stars=Array.from({length:Math.min(110,Math.floor(innerWidth/14))},()=>({
         x:Math.random()*innerWidth,
         y:Math.random()*innerHeight,
-        r:Math.random()*1.35+.2,
-        s:Math.random()*.09+.025,
-        a:Math.random()*.42+.07
+        r:Math.random()*1.5+.2,
+        s:Math.random()*.11+.03,
+        a:Math.random()*.44+.08
       }));
     }
-    function draw(){
+    function drawStars(){
       ctx.clearRect(0,0,innerWidth,innerHeight);
-      for(const p of dots){
-        p.y-=p.s;
-        if(p.y<0){p.y=innerHeight;p.x=Math.random()*innerWidth}
+      for(const s of stars){
+        s.y-=s.s;
+        if(s.y<0){s.y=innerHeight+2;s.x=Math.random()*innerWidth}
         ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle='rgba(255,255,255,'+p.a+')';
+        ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+        ctx.fillStyle='rgba(255,255,255,'+s.a+')';
         ctx.fill();
       }
-      requestAnimationFrame(draw);
+      requestAnimationFrame(drawStars);
     }
-    addEventListener('resize',resize);
-    resize();
-    draw();
+    addEventListener('resize',resizeCanvas);
+    resizeCanvas();
+    drawStars();
+
+    const digitLayer=document.getElementById('digitLayer');
+    const NS='http://www.w3.org/2000/svg';
+    function makeDigits(){
+      digitLayer.innerHTML='';
+      let y=90;
+      for(let r=0;r<43;r++){
+        const t=document.createElementNS(NS,'text');
+        t.setAttribute('x','146');
+        t.setAttribute('y',String(y));
+        t.setAttribute('opacity',r%6===0?'0.92':'0.74');
+        let line='';
+        for(let i=0;i<46;i++) line+=Math.floor(Math.random()*10);
+        t.textContent=line;
+        digitLayer.appendChild(t);
+        y+=8.35;
+      }
+    }
+    makeDigits();
+    setInterval(makeDigits,2200);
   </script>
 </body>
 </html>
