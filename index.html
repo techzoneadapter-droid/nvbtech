@@ -363,7 +363,10 @@
     .brand-mark-image {width:76px!important;height:76px!important;display:flex;align-items:center;justify-content:center;padding:3px;border-radius:18px;overflow:visible;background:radial-gradient(circle at center,rgba(205,163,74,.11),rgba(8,13,23,.3))}
     .brand-mark-image img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;max-width:100%;max-height:100%;filter:drop-shadow(0 4px 12px rgba(202,154,63,.15))}
     @media(max-width:640px){.brand-mark-image{width:60px!important;height:60px!important;padding:1px}.brand-copy strong{font-size:18px}}
-    /* Keep complete logo artwork visible at every breakpoint */
+    /* Clean frameless official logo — overrides every earlier mark style */
+    .brand .brand-mark.brand-mark-image{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;outline:0!important;overflow:visible!important}
+    .brand .brand-mark.brand-mark-image img{filter:none!important;object-fit:contain;object-position:center}
+        /* Keep complete logo artwork visible at every breakpoint */
     .brand-mark{overflow:visible;flex-shrink:0}
     .brand-mark svg{max-width:100%;max-height:100%;object-fit:contain;overflow:visible}
     .brand-copy{overflow:visible}
