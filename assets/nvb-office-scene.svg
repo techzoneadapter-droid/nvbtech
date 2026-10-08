@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1000" preserveAspectRatio="xMidYMid slice"><defs>
+<linearGradient id="room" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#020915"/><stop offset=".5" stop-color="#10213b"/><stop offset="1" stop-color="#051021"/></linearGradient>
+<linearGradient id="window" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#416eaf"/><stop offset=".63" stop-color="#18355b"/><stop offset="1" stop-color="#080e18"/></linearGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#142a45"/><stop offset="1" stop-color="#02050b"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="16"/></filter><filter id="small"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<path fill="url(#room)" d="M0 0h1920v1000H0z"/>
+<path fill="#040c1b" d="M0 0h980v630H0z"/><path fill="#0f1d30" d="M800 0h1120v680H800z"/>
+<path fill="url(#window)" d="M1330 0h590v625h-590z"/>
+<g opacity=".5"><path d="M1400 530V330h40v200m45 0V260h75v270m39 0V200h40v330m48 0V280h54v250m54 0V170h63v360m55 0V315h30v215" fill="#0c1930" stroke="#84b5fa" stroke-width="1"/><g fill="#7eadf2"><path d="M1413 350h5v6h-5zm0 25h5v6h-5zm110-70h5v6h-5zm0 50h5v6h-5zm94-100h5v6h-5zm114 85h5v6h-5zm75-105h5v6h-5z"/></g></g>
+<path d="M1275 0v650M1660 0v645" stroke="#121f31" stroke-width="28"/><path d="M1288 0v650M1674 0v645" stroke="#4177bd" stroke-width="3" opacity=".75"/>
+<path d="M0 612h1920v388H0z" fill="url(#floor)"/>
+<path d="M0 715L1920 660M0 880L1920 730M0 980L1920 835" stroke="#37629a" stroke-opacity=".3" stroke-width="4"/>
+<path d="M875 0h7v560h-7zM887 77h890" stroke="#1a7bff" stroke-width="8"/><path d="M887 77h890" stroke="#238dff" stroke-width="24" opacity=".33" filter="url(#blur)"/>
+<path d="M1240 0v650" stroke="#8cc8ff" stroke-width="4" opacity=".5"/>
+<path d="M1080 455h620v250h-620z" fill="#08111e" stroke="#2c4969" stroke-width="9"/>
+<path d="M1080 690h620" stroke="#157aff" stroke-width="9"/><path d="M1080 690h620" stroke="#1a8cff" stroke-width="24" opacity=".48" filter="url(#blur)"/>
+<path d="M0 570h870v80H0z" fill="#081522" opacity=".5"/><path d="M0 635h920" stroke="#448cce" stroke-width="3" opacity=".35"/>
+<g opacity=".35"><path d="M960 540v110M980 580v70M1000 570v80" stroke="#3889df" stroke-width="12"/></g>
+<path d="M0 0h1920v1000H0z" fill="#061020" opacity=".11"/></svg>
