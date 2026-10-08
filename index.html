@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#090f1b" />
   <meta name="description" content="NVB Tech — giải pháp công nghệ, phần mềm, AI và tự động hóa dành cho doanh nghiệp." />
   <meta property="og:title" content="NVB Tech | Technology • AI • Digital Solutions" />
-  <meta property="og:description" content="Kiến tạo giải pháp công nghệ cho tương lai." />
+  <meta property="og:description" content="Phần mềm, nền tảng số, AI và tự động hóa cho doanh nghiệp hiện đại." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <title>NVB Tech | Công ty TNHH Công nghệ và Dịch vụ NVB</title>
-  <!-- build: 2026-10-08-command-center -->
+  <!-- build: 2026-10-08-flagship-redesign -->
 
   <style>
     :root{
@@ -403,7 +403,91 @@
     footer{background:#090e18}
     ::selection{background:#caa256;color:#101622}
     @media(max-width:640px){.hero{padding-top:55px}.hero-visual{min-height:410px}h1{font-size:clamp(39px,10vw,54px)}.section{padding:70px 0}.brand-copy strong{font-size:19px}}
-    </style>
+    
+    /* NVB flagship design system — gold hardware / midnight-blue digital */
+    :root{--bg:#070e19;--bg2:#101c2c;--card:rgba(15,25,41,.9);--line:rgba(189,206,226,.12);--text:#f5f7fb;--muted:#a4b0bf;--red:#dcb566;--cyan:#76b5e2;--shadow:0 28px 85px rgba(0,0,0,.32)}
+    body{background:radial-gradient(ellipse 45% 28% at 88% 7%,rgba(213,170,88,.13),transparent),radial-gradient(ellipse 38% 32% at 4% 30%,rgba(57,100,160,.13),transparent),linear-gradient(180deg,#070d17 0%,#0b1727 43%,#080f1a 100%);line-height:1.5}
+    .grid-bg{opacity:.45;background-image:linear-gradient(rgba(145,174,207,.038) 1px,transparent 1px),linear-gradient(90deg,rgba(145,174,207,.038) 1px,transparent 1px);background-size:54px 54px}
+    .container{width:min(1260px,calc(100% - 48px))}
+    header{background:rgba(7,13,23,.88)}
+    .nav{min-height:96px}
+    nav{gap:20px}
+    nav>a:not(.nav-cta){font-size:13px;font-weight:600;white-space:nowrap}
+    .brand-copy strong{font-size:24px}
+    .hero{min-height:720px;padding:100px 0 78px}
+    .hero-grid{gap:65px;grid-template-columns:1.02fr .98fr}
+    h1{font-size:clamp(48px,5.4vw,76px);max-width:750px;line-height:1.065}
+    .hero p{max-width:560px}
+    .hero-visual{min-height:555px}
+    .command{height:555px;background:radial-gradient(circle at 49% 47%,rgba(201,158,81,.09),transparent 47%),linear-gradient(145deg,rgba(20,36,58,.95),rgba(7,15,27,.98));border-color:rgba(213,177,108,.22)}
+    .command::before{opacity:.4}
+    .command-core{box-shadow:0 0 0 18px rgba(215,177,93,.028),0 0 0 47px rgba(123,171,217,.022),0 0 80px rgba(215,165,70,.12)}
+    .btn-primary,.nav-cta{background:linear-gradient(115deg,#f8e4ab,#d8ac56 57%,#ab7830);color:#131b27}
+    .section{padding:110px 0}
+    .section-head{margin-bottom:44px}
+    h2{font-size:clamp(36px,4.2vw,58px)}
+    .gold-text{color:#e8c47c}
+    .services{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .service{min-height:350px;padding:35px;background:linear-gradient(148deg,rgba(19,34,54,.95),rgba(10,19,32,.93));border-color:rgba(183,204,225,.12)}
+    .service:hover{border-color:rgba(222,184,105,.5)}
+    .service h3{font-size:24px}
+    .service p{font-size:15px}
+    .capability-strip{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:28px 0;border-top:1px solid rgba(208,182,122,.16);border-bottom:1px solid rgba(208,182,122,.16);color:#b5bfd0}
+    .capability-strip span{font-size:11px;font-weight:900;letter-spacing:.16em;color:#d6b46e}
+    .capability-strip b{font-size:11px;letter-spacing:.10em;color:#9db2cb;font-weight:700}
+    .solutions-section{padding-top:115px}
+    .solution-grid{display:grid;grid-template-columns:1.22fr 1fr;gap:18px}
+    .solution-feature,.solution-side{border:1px solid rgba(194,208,226,.12);border-radius:26px;background:linear-gradient(145deg,#132239,#0b1728);padding:32px;overflow:hidden;position:relative;min-width:0}
+    .solution-feature{grid-row:span 2;display:flex;flex-direction:column}
+    .solution-feature:before,.solution-side:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 5%,rgba(218,181,103,.075),transparent 45%);pointer-events:none}
+    .feature-top{display:flex;justify-content:space-between;gap:12px;color:#d9b975;font-weight:800;font-size:12px;letter-spacing:.14em}
+    .feature-top span:last-child{font-size:22px;line-height:1}
+    .feature-art{height:288px;margin:24px 0 32px;position:relative;display:grid;place-items:center;background:radial-gradient(ellipse at center,rgba(101,151,209,.12),transparent 65%)}
+    .art-window{position:relative;width:83%;height:217px;border-radius:18px;border:1px solid rgba(182,211,237,.22);background:linear-gradient(165deg,rgba(28,48,75,.97),rgba(10,18,32,.97));box-shadow:0 25px 55px rgba(0,0,0,.3);transform:perspective(650px) rotateY(-7deg) rotateX(4deg);padding:20px}
+    .window-dots{font-size:10px;color:#d7b977;letter-spacing:5px}
+    .art-lines{display:grid;gap:9px;margin-top:22px;width:50%}
+    .art-lines i{height:8px;border-radius:6px;background:linear-gradient(90deg,rgba(225,187,112,.5),rgba(121,161,209,.13))}
+    .art-lines i:nth-child(2){width:70%}.art-lines i:nth-child(3){width:86%}
+    .art-columns{position:absolute;bottom:25px;right:23px;left:47%;height:100px;display:flex;align-items:end;gap:10px}
+    .art-columns i{flex:1;background:linear-gradient(#eccb8c,#748caf);opacity:.65;border-radius:5px 5px 0 0}
+    .art-columns i:nth-child(1){height:35%}.art-columns i:nth-child(2){height:63%}.art-columns i:nth-child(3){height:48%}.art-columns i:nth-child(4){height:95%}.art-columns i:nth-child(5){height:74%}
+    .art-float{position:absolute;right:4%;bottom:22px;border:1px solid rgba(225,194,131,.3);background:rgba(10,18,30,.88);color:#e8c47c;font:700 10px ui-monospace,monospace;letter-spacing:.12em;border-radius:10px;padding:12px 15px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+    .solution-feature h3{margin:0 0 14px;font-size:30px;line-height:1.15;max-width:450px}
+    .solution-feature p,.solution-side p{color:#aab9cb;line-height:1.8;margin:0;font-size:15px}
+    .feature-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+    .feature-pills span,.side-bottom span{border:1px solid rgba(187,204,222,.13);background:rgba(255,255,255,.035);border-radius:9px;padding:8px 10px;color:#cbd5e0;font-size:11px}
+    .solution-side{min-height:305px}
+    .side-icon{font-size:35px;color:#e6c47f;margin-bottom:12px}
+    .side-index{font-size:11px;letter-spacing:.16em;color:#e3be73;font-weight:800;margin-bottom:12px}
+    .solution-side h3{font-size:27px;line-height:1.16;margin:0 0 14px;max-width:410px}
+    .side-bottom{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+    .approach-section{background:linear-gradient(90deg,rgba(22,39,59,.62),rgba(10,21,36,.15));border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045)}
+    .approach-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}
+    .approach-grid p{color:#a7b6c8;font-size:17px;line-height:1.85;max-width:530px}
+    .text-link{display:inline-flex;gap:18px;color:#e8c47c;font-weight:800;margin-top:20px;border-bottom:1px solid rgba(232,196,124,.32);padding-bottom:9px}
+    .approach-matrix{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .approach-matrix>div{min-height:190px;border:1px solid rgba(190,210,233,.12);border-radius:22px;padding:25px;background:rgba(12,24,39,.72)}
+    .approach-matrix strong{display:block;color:#d8b370;margin-bottom:24px;font:800 12px ui-monospace,monospace}
+    .approach-matrix b{display:block;font-size:18px;margin-bottom:10px}
+    .approach-matrix span{color:#95a7bc;line-height:1.6;font-size:14px}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .process-item{padding:26px 28px 10px 0}
+    .step-number{font-size:13px;color:#e6c37e;letter-spacing:.12em;font-weight:900}
+    .step-line{height:1px;background:linear-gradient(90deg,#e6c37e,rgba(174,197,219,.17));margin:27px 0}
+    .process-item h3{font-size:22px;margin:0 0 12px}
+    .process-item p{color:#9eafc2;line-height:1.7;font-size:15px}
+    .consult-panel{border-radius:30px;padding:60px;background:linear-gradient(120deg,#172b47,#0b1728 80%);border:1px solid rgba(222,182,102,.25);position:relative;overflow:hidden;display:flex;justify-content:space-between;gap:25px;align-items:end}
+    .consult-orb{position:absolute;width:350px;height:350px;right:17%;top:-220px;background:radial-gradient(circle,rgba(224,176,82,.3),transparent 68%);pointer-events:none}
+    .consult-panel h2{font-size:clamp(34px,4vw,54px)}
+    .consult-panel p{color:#aebfd0;line-height:1.75;max-width:575px;font-size:16px}
+    .consult-actions{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
+    .company-shell{border-color:rgba(220,182,105,.19)}
+    footer{background:transparent}
+    @media(max-width:1080px){.approach-grid{grid-template-columns:1fr;gap:30px}.consult-panel{flex-direction:column;align-items:start}.solution-grid{grid-template-columns:1fr}.solution-feature{grid-row:auto}.process-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:920px){.hero-grid{grid-template-columns:1fr}.services{grid-template-columns:1fr}.hero{padding:60px 0}.hero-visual{min-height:500px}.command{height:500px}.capability-strip{justify-content:flex-start}.container{width:min(1260px,calc(100% - 32px))}}
+    @media(max-width:640px){h1{font-size:clamp(42px,11vw,58px)}.hero{padding-top:42px}.section{padding:72px 0}.capability-strip{gap:12px;padding:22px 0}.capability-strip b{font-size:10px}.solution-feature,.solution-side{padding:22px}.feature-art{height:220px}.art-window{height:170px}.approach-matrix,.process-grid{grid-template-columns:1fr}.approach-matrix>div{min-height:145px}.consult-panel{padding:30px 22px}.brand-copy strong{font-size:19px}.brand-copy small{font-size:9px}.command{height:420px}.hero-visual{min-height:420px}.node{width:116px}.command-core{width:130px;height:130px}.hero-actions .btn{width:auto}}
+    @media(prefers-reduced-motion:reduce){.network path{animation:none}}
+</style>
 </head>
 
 <body>
@@ -420,6 +504,8 @@
       <nav id="nav">
         <a href="#home">Trang chủ</a>
         <a href="#services">Dịch vụ</a>
+        <a href="#solutions">Giải pháp</a>
+        <a href="#process">Quy trình</a>
         <a href="#company">Doanh nghiệp</a>
         <a href="#contact">Liên hệ</a>
         <a class="nav-cta" href="#contact">Liên hệ ngay</a>
@@ -436,8 +522,8 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow"><i></i> NVB Technology &amp; Services</div>
-          <h1>Công nghệ tạo nên <span>giá trị khác biệt.</span></h1>
-          <p>NVB Tech tập trung vào phần mềm, AI, tự động hóa và các giải pháp số giúp doanh nghiệp vận hành thông minh hơn, nhanh hơn và hiệu quả hơn.</p>
+          <h1>Công nghệ để <span>doanh nghiệp bứt phá.</span></h1>
+          <p>Từ chiến lược đến sản phẩm: NVB Tech thiết kế phần mềm, xây dựng nền tảng số, tích hợp AI và tự động hóa để giải quyết những bài toán vận hành thực tế.</p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="tel:0357938081">Gọi điện</a>
@@ -512,6 +598,45 @@
           </article>
         </div>
       </div>
+    </section>
+
+
+    <div class="container capability-strip reveal" aria-label="Năng lực công nghệ">
+      <span>HỆ SINH THÁI GIẢI PHÁP</span><b>SOFTWARE ENGINEERING</b><b>AI INTEGRATION</b><b>WORKFLOW AUTOMATION</b><b>DIGITAL EXPERIENCE</b>
+    </div>
+
+    <section class="section solutions-section" id="solutions">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">Từ vấn đề đến giải pháp</div><h2>Không chỉ là công nghệ.<br><span class="gold-text">Đó là cách vận hành mới.</span></h2></div><p>Chúng tôi kết nối trải nghiệm khách hàng, dữ liệu và quy trình kinh doanh để mỗi sản phẩm số mang lại giá trị sử dụng rõ ràng.</p></div>
+        <div class="solution-grid">
+          <article class="solution-feature reveal"><div class="feature-top"><span>01 / NỀN TẢNG SỐ</span><span>↗</span></div><div class="feature-art" aria-hidden="true"><div class="art-window"><span class="window-dots">● ● ●</span><div class="art-lines"><i></i><i></i><i></i></div><div class="art-columns"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="art-float">SYSTEM / ONLINE</div></div><h3>Hệ thống được thiết kế để phát triển</h3><p>Website, ứng dụng web, bảng điều khiển và công cụ quản trị có giao diện đồng nhất, dễ sử dụng và sẵn sàng mở rộng theo nhu cầu.</p><div class="feature-pills"><span>Web application</span><span>Dashboard</span><span>UX/UI</span></div></article>
+          <article class="solution-side reveal"><div class="side-icon">✦</div><div class="side-index">02 / TRÍ TUỆ NHÂN TẠO</div><h3>AI hỗ trợ con người làm việc thông minh hơn.</h3><p>Tích hợp trợ lý AI, xử lý nội dung, phân loại thông tin và các luồng hỗ trợ quyết định với sự kiểm soát của con người.</p><div class="side-bottom"><span>AI ASSISTANTS</span><span>KNOWLEDGE WORKFLOWS</span></div></article>
+          <article class="solution-side reveal"><div class="side-icon">⌘</div><div class="side-index">03 / TỰ ĐỘNG HÓA</div><h3>Giảm thao tác lặp, tăng thời gian tạo giá trị.</h3><p>Kết nối các bước công việc thành quy trình rõ ràng: tiếp nhận, xử lý, kiểm tra và chuyển tiếp giữa các bộ phận.</p><div class="side-bottom"><span>WORKFLOW</span><span>INTEGRATIONS</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach-section" id="approach">
+      <div class="container approach-grid">
+        <div class="reveal"><div class="kicker">Tư duy triển khai</div><h2>Đẹp về giao diện.<br><span class="gold-text">Mạnh về nền tảng.</span></h2><p>Giải pháp công nghệ hiệu quả cần xuất phát từ mục tiêu kinh doanh, thay vì chạy theo xu hướng. NVB Tech ưu tiên kiến trúc rõ ràng, khả năng sử dụng và trải nghiệm nhất quán trên mọi thiết bị.</p><a href="#contact" class="text-link">Trao đổi về dự án <span>↗</span></a></div>
+        <div class="approach-matrix reveal"><div><strong>01</strong><b>Định hướng đúng</b><span>Hiểu bài toán trước khi lựa chọn công nghệ.</span></div><div><strong>02</strong><b>Thiết kế có hệ thống</b><span>Mỗi thành phần đều có vai trò và mục đích.</span></div><div><strong>03</strong><b>Triển khai linh hoạt</b><span>Ưu tiên giải pháp phù hợp quy mô thực tế.</span></div><div><strong>04</strong><b>Không ngừng tối ưu</b><span>Hoàn thiện hiệu năng và trải nghiệm sử dụng.</span></div></div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">Quy trình hợp tác</div><h2>Từ ý tưởng đến<br><span class="gold-text">giải pháp vận hành.</span></h2></div><p>Một lộ trình đơn giản, minh bạch giúp dự án đi đúng hướng từ bước đầu cho đến khi có thể đưa vào sử dụng.</p></div>
+        <div class="process-grid">
+          <article class="process-item reveal"><span class="step-number">01</span><div class="step-line"></div><h3>Khám phá</h3><p>Lắng nghe nhu cầu, phân tích mục tiêu và xác định phạm vi phù hợp.</p></article>
+          <article class="process-item reveal"><span class="step-number">02</span><div class="step-line"></div><h3>Thiết kế</h3><p>Xây dựng trải nghiệm, luồng sử dụng và kiến trúc giải pháp.</p></article>
+          <article class="process-item reveal"><span class="step-number">03</span><div class="step-line"></div><h3>Phát triển</h3><p>Triển khai từng thành phần, tích hợp và kiểm thử tính ổn định.</p></article>
+          <article class="process-item reveal"><span class="step-number">04</span><div class="step-line"></div><h3>Hoàn thiện</h3><p>Bàn giao, cải thiện hiệu suất và chuẩn bị khả năng mở rộng.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-panel-section" id="consult">
+      <div class="container"><div class="consult-panel reveal"><div class="consult-orb" aria-hidden="true"></div><div><div class="kicker">Let's build what's next</div><h2>Ý tưởng lớn bắt đầu<br>từ <span class="gold-text">một cuộc trò chuyện.</span></h2><p>Trao đổi nhu cầu với NVB Tech để cùng xác định hướng triển khai phù hợp cho sản phẩm hoặc doanh nghiệp của bạn.</p></div><div class="consult-actions"><a class="btn btn-primary" href="tel:0357938081">Gọi tư vấn ↗</a><a class="btn btn-ghost" href="https://zalo.me/0357938081" target="_blank" rel="noopener noreferrer">Nhắn Zalo ↗</a></div></div></div>
     </section>
 
     <section class="section" id="company">
