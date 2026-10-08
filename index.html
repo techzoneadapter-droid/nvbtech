@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#050913" />
+  <meta name="theme-color" content="#090f1b" />
   <meta name="description" content="NVB Tech — giải pháp công nghệ, phần mềm, AI và tự động hóa dành cho doanh nghiệp." />
   <meta property="og:title" content="NVB Tech | Technology • AI • Digital Solutions" />
   <meta property="og:description" content="Kiến tạo giải pháp công nghệ cho tương lai." />
@@ -359,6 +359,10 @@
       .reveal{opacity:1;transform:none}
     }
   
+    /* Keep complete logo artwork visible at every breakpoint */
+    .brand-mark{overflow:visible;flex-shrink:0}
+    .brand-mark svg{max-width:100%;max-height:100%;object-fit:contain;overflow:visible}
+    .brand-copy{overflow:visible}
     /* NVB 2026 — premium gold & graphite design refinements */
     :root {--bg:#080d17;--bg2:#101827;--text:#f3f3f0;--muted:#a7b1c0;--line:rgba(214,174,94,.14);--shadow:0 28px 86px rgba(0,0,0,.32)}
     body{background:radial-gradient(ellipse at 82% 3%,rgba(200,147,55,.11),transparent 36%),radial-gradient(ellipse at 1% 43%,rgba(91,114,150,.09),transparent 32%),linear-gradient(180deg,#090f1b,#101827 56%,#080e18);font-family:Inter,"Segoe UI",sans-serif}
