@@ -359,6 +359,10 @@
       .reveal{opacity:1;transform:none}
     }
   
+    /* Official NVB logo: full artwork, no cropping */
+    .brand-mark-image {width:76px!important;height:76px!important;display:flex;align-items:center;justify-content:center;padding:3px;border-radius:18px;overflow:visible;background:radial-gradient(circle at center,rgba(205,163,74,.11),rgba(8,13,23,.3))}
+    .brand-mark-image img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;max-width:100%;max-height:100%;filter:drop-shadow(0 4px 12px rgba(202,154,63,.15))}
+    @media(max-width:640px){.brand-mark-image{width:60px!important;height:60px!important;padding:1px}.brand-copy strong{font-size:18px}}
     /* Keep complete logo artwork visible at every breakpoint */
     .brand-mark{overflow:visible;flex-shrink:0}
     .brand-mark svg{max-width:100%;max-height:100%;object-fit:contain;overflow:visible}
@@ -406,7 +410,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="NVB Tech">
-        <div class="brand-mark"><svg viewBox="0 0 120 120" role="img" aria-label="NVB" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff6dd"/><stop offset=".32" stop-color="#e5b95b"/><stop offset=".58" stop-color="#f7e5ac"/><stop offset="1" stop-color="#a66e22"/></linearGradient></defs><path d="M13 33Q59-2 108 28" stroke="url(#metal)" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M107 87Q56 125 12 93" stroke="url(#metal)" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M13 81V43L42 75V42L62 76L82 43V81M87 43h17q12 1 5 16 12 15-5 22H87V43M88 62h18" fill="none" stroke="url(#metal)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+        <div class="brand-mark brand-mark-image"><img src="assets/nvb-logo.webp" alt="Logo chính thức NVB Technology & Services" width="84" height="84" decoding="async" fetchpriority="high"></div>
         <div class="brand-copy"><strong>NVB <span style="color:#dfb65d">TECH</span></strong><small>TECHNOLOGY &amp; SERVICES</small></div>
       </a>
 
