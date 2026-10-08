@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520">
+<defs><linearGradient id="metal" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#ffffff"/><stop offset=".25" stop-color="#9dacbe"/><stop offset=".5" stop-color="#fdfdff"/><stop offset=".7" stop-color="#8e9caf"/><stop offset="1" stop-color="#f6faff"/></linearGradient><linearGradient id="blue" x1="0" x2=".6" y1="0" y2="1"><stop stop-color="#96edff"/><stop offset=".22" stop-color="#086bff"/><stop offset=".67" stop-color="#0737a3"/><stop offset="1" stop-color="#35d3ff"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8"/></filter></defs>
+<g transform="translate(40 0)">
+<path d="M111 224C194 75 438 29 578 163" stroke="#037dff" stroke-width="37" fill="none" stroke-linecap="round" filter="url(#glow)" opacity=".75"/>
+<path d="M109 224C207 77 434 45 582 168" stroke="url(#blue)" stroke-width="31" fill="none" stroke-linecap="round"/>
+<path d="M133 227C226 109 420 64 565 174" stroke="url(#metal)" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M579 290C490 448 245 469 112 348" stroke="#087cff" stroke-width="34" fill="none" stroke-linecap="round" filter="url(#glow)" opacity=".7"/>
+<path d="M577 290C488 444 248 460 112 348" stroke="url(#blue)" stroke-width="24" fill="none" stroke-linecap="round"/>
+<g font-family="Arial,Helvetica,sans-serif" font-weight="1000" font-size="208" letter-spacing="-26" paint-order="stroke fill" stroke="#07172e" stroke-width="20" stroke-linejoin="round">
+<text x="32" y="336" fill="#0770ee" transform="translate(12 13)">NVB</text><text x="32" y="336" fill="url(#metal)" stroke="#182e4f" stroke-width="10">NVB</text></g>
+<path d="M73 316L73 210M251 320L251 210M386 322L386 207M562 318L562 215" stroke="#dbf8ff" stroke-width="3" opacity=".6"/>
+</g></svg>
