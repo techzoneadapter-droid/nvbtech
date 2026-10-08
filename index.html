@@ -487,6 +487,75 @@
     @media(max-width:920px){.hero-grid{grid-template-columns:1fr}.services{grid-template-columns:1fr}.hero{padding:60px 0}.hero-visual{min-height:500px}.command{height:500px}.capability-strip{justify-content:flex-start}.container{width:min(1260px,calc(100% - 32px))}}
     @media(max-width:640px){h1{font-size:clamp(42px,11vw,58px)}.hero{padding-top:42px}.section{padding:72px 0}.capability-strip{gap:12px;padding:22px 0}.capability-strip b{font-size:10px}.solution-feature,.solution-side{padding:22px}.feature-art{height:220px}.art-window{height:170px}.approach-matrix,.process-grid{grid-template-columns:1fr}.approach-matrix>div{min-height:145px}.consult-panel{padding:30px 22px}.brand-copy strong{font-size:19px}.brand-copy small{font-size:9px}.command{height:420px}.hero-visual{min-height:420px}.node{width:116px}.command-core{width:130px;height:130px}.hero-actions .btn{width:auto}}
     @media(prefers-reduced-motion:reduce){.network path{animation:none}}
+
+/* NVB 2026 electric-blue redesign. Kept independent of deprecated gold layers. */
+:root{--bg:#050c19;--bg2:#0a1932;--card:rgba(9,27,57,.78);--line:rgba(100,167,255,.19);--text:#f4f8ff;--muted:#adbed6;--red:#2476ff;--red2:#74b6ff;--cyan:#5ec6ff;--shadow:0 30px 90px rgba(0,8,31,.48)}
+html{scroll-padding-top:94px}
+body{background:radial-gradient(ellipse 52% 30% at 85% 8%,rgba(19,89,213,.23),transparent 85%),radial-gradient(ellipse 43% 37% at 2% 39%,rgba(11,67,157,.16),transparent 85%),linear-gradient(180deg,#040a15,#09182e 50%,#050a16)!important;font-family:Inter,"Segoe UI",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(120deg,transparent 30%,rgba(0,102,255,.024) 60%,transparent 75%)}
+header{background:rgba(5,13,28,.8)!important;border-color:rgba(100,166,255,.13)!important;box-shadow:0 4px 24px rgba(0,0,0,.1)}
+.nav{min-height:86px!important}
+.brand-mark-image{width:62px!important;height:62px!important}
+.brand-copy strong{font-size:22px!important;letter-spacing:.005em!important}
+.brand-copy small{color:#9fb9de!important;letter-spacing:.11em!important}
+.brand-accent{color:#53a2ff}
+nav>a:not(.nav-cta){color:#c9d9ee!important}
+nav>a:not(.nav-cta):hover{color:#5daaff!important}
+.btn-primary,.nav-cta{background:linear-gradient(125deg,#2475ff,#1462f4)!important;border-color:rgba(127,184,255,.28)!important;color:#fff!important;box-shadow:0 10px 30px rgba(18,100,255,.28)!important}
+.btn-primary:hover,.nav-cta:hover{box-shadow:0 14px 45px rgba(18,111,255,.47)!important}
+.btn-ghost{border-color:rgba(115,173,255,.26)!important;background:rgba(20,50,96,.3)!important;color:#e6f3ff}
+.eyebrow{background:none!important;border:0!important;padding:0!important;color:#8dbfff!important;letter-spacing:.18em!important}
+.eyebrow i{background:#2884ff!important;box-shadow:0 0 16px #227cff!important}
+.hero{min-height:730px;padding:74px 0 90px!important}
+.hero-grid{grid-template-columns:.95fr 1.05fr!important;gap:28px!important}
+.hero h1{font-size:clamp(42px,4.6vw,72px)!important;line-height:1.11!important;letter-spacing:-.049em!important;max-width:760px}
+.hero h1 span{background:linear-gradient(135deg,#4793ff,#80c6ff)!important;-webkit-background-clip:text!important;background-clip:text!important}
+.hero p{font-size:17px!important;color:#b8c9e3!important;line-height:1.75!important}
+.hero-actions{margin-top:33px!important}
+.btn{border-radius:999px!important;padding:15px 24px!important}
+.chips{margin-top:26px!important}
+.chip{border-color:rgba(100,166,255,.18)!important;background:rgba(34,83,158,.11)!important;color:#afc9ec!important}
+.hero-visual{min-height:560px!important}
+.globe-stage{height:560px;width:100%;position:relative;isolation:isolate;display:grid;place-items:center;overflow:hidden}
+.globe-stage::before{content:"";position:absolute;inset:5%;background:radial-gradient(circle,rgba(36,121,255,.18),transparent 62%);filter:blur(12px)}
+.globe-halo{position:absolute;width:90%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(21,99,243,.13),rgba(18,80,181,.04) 48%,transparent 68%);filter:blur(20px)}
+.globe{position:relative;width:min(430px,76%);aspect-ratio:1;overflow:hidden;border-radius:50%;box-shadow:inset -28px -18px 65px #030b26,inset 18px 15px 55px rgba(67,160,255,.56),0 0 40px rgba(19,111,255,.65),0 0 125px rgba(20,90,234,.19);border:1px solid rgba(137,206,255,.7);background:radial-gradient(circle at 30% 28%,#1953a8 0%,#073274 32%,#051b50 68%,#030d2b 100%);animation:globe-breathe 7s ease-in-out infinite}
+.globe::before{content:"";position:absolute;inset:0;z-index:2;border-radius:50%;background:radial-gradient(circle at 26% 23%,rgba(142,222,255,.23),transparent 36%),linear-gradient(105deg,transparent 37%,rgba(3,9,34,.45));pointer-events:none}
+.globe-longitudes{position:absolute;inset:0;background:repeating-radial-gradient(ellipse 35% 100% at center,transparent 0 26px,rgba(99,185,255,.37) 27px 28px,transparent 29px 45px)}
+.globe-latitudes{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0 38px,rgba(89,177,255,.28) 39px 40px,transparent 41px 73px);mask-image:radial-gradient(ellipse at center,#000 55%,transparent 71%)}
+.globe-continents{position:absolute;inset:13%;opacity:.88;background:radial-gradient(ellipse 23% 18% at 29% 33%,#2b88df 18%,transparent 90%),radial-gradient(ellipse 16% 31% at 38% 62%,#2376c8 21%,transparent 90%),radial-gradient(ellipse 32% 20% at 69% 30%,#3e9de8 18%,transparent 90%),radial-gradient(ellipse 16% 24% at 57% 61%,#2372be 12%,transparent 95%),radial-gradient(ellipse 12% 9% at 80% 75%,#2876c6 13%,transparent 95%);filter:drop-shadow(0 0 15px #1579ff);transform:rotate(-18deg)}
+.globe-node{position:absolute;z-index:3;width:8px;height:8px;border-radius:50%;background:#d7f8ff;box-shadow:0 0 8px 3px #38c4ff,0 0 22px 7px #1586ff}
+.n1{top:32%;left:24%}.n2{top:24%;left:62%}.n3{top:55%;left:76%}.n4{top:71%;left:43%}.n5{top:46%;left:47%}
+.globe-orbit{position:absolute;width:93%;height:56%;border:1px solid rgba(95,188,255,.43);border-radius:50%;transform:rotate(-23deg);box-shadow:0 0 16px rgba(24,104,255,.2)}
+.orbit-b{transform:rotate(52deg);width:75%;height:86%;opacity:.55}
+.orbit-tag{position:absolute;z-index:5;display:flex;gap:9px;align-items:center;padding:11px 14px;border:1px solid rgba(119,182,255,.29);background:rgba(7,27,61,.81);backdrop-filter:blur(15px);border-radius:12px;color:#cce6ff;box-shadow:0 12px 28px rgba(0,10,39,.35);font:700 10px/1.2 ui-monospace,monospace;letter-spacing:.08em}
+.orbit-tag span{color:#67bbff;font-size:19px}.tag-a{left:0;top:23%}.tag-b{right:0;top:37%}.tag-c{left:7%;bottom:21%}
+.globe-caption{position:absolute;left:16%;right:16%;bottom:0;display:flex;align-items:center;gap:9px;font:700 10px/1.4 ui-monospace,monospace;letter-spacing:.12em;color:#a2c6f3}
+.globe-caption b{margin-left:auto;font-size:9px;color:#66c6ff}
+.live-dot{background:#26b8ff!important;box-shadow:0 0 12px #258bff!important}
+@keyframes globe-breathe{50%{box-shadow:inset -28px -18px 65px #030b26,inset 18px 15px 55px rgba(67,160,255,.56),0 0 65px rgba(30,131,255,.8),0 0 135px rgba(20,90,234,.25)}}
+.kicker{color:#66aaff!important}
+.gold-text{color:#8bc4ff!important;background:none!important;-webkit-text-fill-color:#8bc4ff!important}
+.section{padding:88px 0!important}
+.service,.solution-feature,.solution-side,.process-item,.company-shell,.company-card,.approach-matrix>div{border-color:rgba(105,167,255,.17)!important;background:linear-gradient(145deg,rgba(14,35,67,.83),rgba(7,18,40,.95))!important}
+.service:hover,.solution-feature:hover,.solution-side:hover{border-color:rgba(77,151,255,.52)!important;box-shadow:0 20px 60px rgba(10,78,182,.14)!important}
+.service-icon{border-color:rgba(63,150,255,.3)!important;background:rgba(34,112,235,.1)!important}
+.service-icon svg{stroke:#72b6ff!important}
+.service h3,.solution-feature h3,.solution-side h3{color:#f5f9ff!important}
+.tag,.feature-pills span{background:rgba(27,101,205,.13)!important;border-color:rgba(75,146,255,.18)!important}
+.capability-strip{border-color:rgba(87,161,255,.18)!important}
+.step-number,.num,.side-index,.feature-top,.side-bottom{color:#66aaff!important}
+.step-line{background:linear-gradient(90deg,#1b70ff,rgba(27,112,255,.1))!important}
+.consult-panel{border-color:rgba(75,151,255,.34)!important;background:linear-gradient(120deg,#112f64,#08172e 80%)!important}
+.consult-orb{background:radial-gradient(circle,rgba(42,135,255,.3),transparent 68%)!important}
+.company-shell{box-shadow:0 26px 90px rgba(0,12,35,.28)}
+footer{background:transparent!important}
+::selection{background:#2476ff;color:white}
+@media(max-width:1050px){.hero-grid{grid-template-columns:1fr!important}.hero{min-height:auto!important}.hero-visual{min-height:470px!important}.globe-stage{height:470px}.globe{width:min(380px,68%)}}
+@media(max-width:920px){nav{background:#06152c!important}nav.open{display:flex}}
+@media(max-width:640px){.container{width:calc(100% - 30px)!important}.hero{padding-top:55px!important;padding-bottom:30px!important}.hero h1{font-size:clamp(40px,10vw,53px)!important}.hero-visual{min-height:380px!important}.globe-stage{height:380px}.globe{width:70%}.orbit-tag{font-size:8px;padding:8px}.tag-a{top:13%;left:1%}.tag-b{right:0;top:43%}.tag-c{left:0;bottom:18%}.globe-caption{left:4%;right:4%;font-size:8px}.globe-caption b{font-size:7px}.globe-orbit{width:98%}.section{padding:66px 0!important}.brand-copy strong{font-size:18px!important}}
+@media(prefers-reduced-motion:reduce){.globe{animation:none!important}}
+
 </style>
 </head>
 
@@ -498,7 +567,7 @@
     <div class="container nav">
       <a class="brand" href="#home" aria-label="NVB Tech">
         <div class="brand-mark brand-mark-image"><img src="assets/nvb-logo.webp" alt="Logo chính thức NVB Technology & Services" width="84" height="84" decoding="async" fetchpriority="high"></div>
-        <div class="brand-copy"><strong>NVB <span style="color:#dfb65d">TECH</span></strong><small>TECHNOLOGY &amp; SERVICES</small></div>
+        <div class="brand-copy"><strong>NVB <span class="brand-accent">TECH</span></strong><small>TECHNOLOGY &amp; SERVICES</small></div>
       </a>
 
       <nav id="nav">
@@ -522,12 +591,12 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow"><i></i> NVB Technology &amp; Services</div>
-          <h1>Công nghệ để <span>doanh nghiệp bứt phá.</span></h1>
-          <p>Từ chiến lược đến sản phẩm: NVB Tech thiết kế phần mềm, xây dựng nền tảng số, tích hợp AI và tự động hóa để giải quyết những bài toán vận hành thực tế.</p>
+          <h1><span>NVB</span><br>Giải pháp công nghệ<br>cho tương lai.</h1>
+          <p>Chúng tôi mang đến các giải pháp công nghệ toàn diện, giúp doanh nghiệp tối ưu hiệu quả và bứt phá trong thời đại số.</p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:0357938081">Gọi điện</a>
-            <a class="btn btn-ghost" href="https://zalo.me/0357938081" target="_blank" rel="noopener">Zalo</a>
+            <a class="btn btn-primary" href="#services">Khám phá ngay <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost" href="#contact">Liên hệ tư vấn</a>
             <a class="btn btn-ghost" href="https://www.facebook.com/nguyen.van.bao.679531/" target="_blank" rel="noopener">Facebook</a>
           </div>
 
@@ -538,22 +607,22 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Trung tâm kết nối công nghệ NVB Tech">
-          <div class="command" role="img" aria-label="NVB Tech kết nối AI, phát triển phần mềm, nền tảng số và tự động hóa">
-            <div class="command-top"><span><span class="live-dot"></span>NVB TECH / TECHNOLOGY ECOSYSTEM</span><span>CONNECTED SYSTEMS</span></div>
-            <svg class="network" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M300 250 C205 230 178 122 108 122"/><path d="M300 250 C395 230 422 122 492 122"/><path d="M300 250 C205 270 178 390 108 390"/><path d="M300 250 C395 270 422 390 492 390"/>
-              <circle cx="300" cy="250" r="151" fill="none" stroke="rgba(217,177,99,.12)" stroke-width="1"/><circle cx="300" cy="250" r="204" fill="none" stroke="rgba(217,177,99,.07)" stroke-width="1"/>
-            </svg>
-            <div class="command-core"><div class="core-symbol">NVB</div><div class="core-label">INNOVATION<br/>ENGINE</div></div>
-            <div class="node node-ai"><span class="node-dot"></span><b>Artificial Intelligence</b><small>AI Integration</small></div>
-            <div class="node node-software"><span class="node-dot"></span><b>Software</b><small>Engineering</small></div>
-            <div class="node node-cloud"><span class="node-dot"></span><b>Digital Platforms</b><small>Web · Applications</small></div>
-            <div class="node node-automation"><span class="node-dot"></span><b>Automation</b><small>Smart Workflow</small></div>
-            <div class="command-foot"><span>TECHNOLOGY × STRATEGY × EXECUTION</span><span>DESIGNED FOR GROWTH</span></div>
+        <div class="hero-visual" aria-label="Địa cầu kết nối công nghệ NVB">
+          <div class="globe-stage">
+            <div class="globe-halo"></div>
+            <div class="globe-orbit orbit-a"></div><div class="globe-orbit orbit-b"></div>
+            <div class="globe" role="img" aria-label="Địa cầu kỹ thuật số thể hiện mạng lưới kết nối toàn cầu">
+              <div class="globe-longitudes"></div>
+              <div class="globe-latitudes"></div>
+              <div class="globe-continents"></div>
+              <span class="globe-node n1"></span><span class="globe-node n2"></span><span class="globe-node n3"></span><span class="globe-node n4"></span><span class="globe-node n5"></span>
+            </div>
+            <div class="orbit-tag tag-a"><span>✦</span> AI &amp; AUTOMATION</div>
+            <div class="orbit-tag tag-b"><span>⌘</span> SOFTWARE ENGINEERING</div>
+            <div class="orbit-tag tag-c"><span>◇</span> CLOUD SOLUTIONS</div>
+            <div class="globe-caption"><span class="live-dot"></span> NVB / CONNECTED FUTURE <b>● SYSTEM ONLINE</b></div>
           </div>
-        </div>
-      </div>
+        </div>      </div>
     </section>
 
     <section class="section" id="services">
