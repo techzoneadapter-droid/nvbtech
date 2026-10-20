@@ -19,3 +19,6 @@ Website domain: https://nvbtech.com.vn/apps/
 Backward-compatible policy page: /reeltara/privacy.html
 
 Nhà phát triển: CÔNG TY TNHH CÔNG NGHỆ VÀ DỊCH VỤ NVB.
+
+## ReelTara markets
+India (IN) and Philippines (PH) only. English Play listings; Vietnam is the legal company registration location, NOT the ReelTara distribution target.
